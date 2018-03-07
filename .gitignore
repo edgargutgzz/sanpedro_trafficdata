@@ -1,0 +1,6 @@
+config.py
+__pycache__
+.ipynb_checkpoints
+traffic_sanpedro.ipynb
+traffic_data.db
+traffic_data.csv
