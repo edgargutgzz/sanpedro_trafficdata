@@ -68,8 +68,9 @@ conn.commit()
 # Create the "traffic" table.
 
 cursor.execute('''CREATE TABLE traffic
-        (traffic_id integer PRIMARY KEY, route_name text, date_time text, distance integer, velocity integer,
-        duration_traffic integer, avg_delay integer, FOREIGN KEY (route_name) REFERENCES routes (route_name)) ''')
+        (traffic_id integer PRIMARY KEY, route_name text, date_time text, distance integer,
+        duration_traffic integer, velocity integer, avg_delay integer,
+        FOREIGN KEY (route_name) REFERENCES routes (route_name)) ''')
 
 conn.close()
 
