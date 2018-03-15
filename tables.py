@@ -16,44 +16,60 @@ cursor.execute('''CREATE TABLE routes
 # Insert routes.
 
 cursor.execute(''' INSERT INTO routes VALUES
+        ("atirantado_leones_entrada", "Av Raúl Rangel Frías 3234, Cumbres 1º. Sector Secc a, 64610 Monterrey, N.L., Mexico",
+        "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico")''')
+
+cursor.execute(''' INSERT INTO routes VALUES
+        ("atirantado_leones_salida", "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico",
+        "Av Raúl Rangel Frías 107-C, Cumbres 1º. Sector Secc a, 64610 Monterrey, N.L., Mexico")''')
+
+cursor.execute(''' INSERT INTO routes VALUES
+        ("atirantado_periferico_entrada", "Blvd. Rogelio Cantú Gómez 1000-C, Sin Nombre de Col 72, 64639 Monterrey, N.L., Mexico",
+        "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico")''')
+
+cursor.execute(''' INSERT INTO routes VALUES
+        ("atirantado_periferico_salida", "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico",
+        "Blvd. Rogelio Cantú Gómez 210, Sin Nombre de Col 72, Monterrey, N.L., Mexico")''')
+
+cursor.execute(''' INSERT INTO routes VALUES
         ("calzada_entrada", "Calz San Pedro 107-S, Miravalle, 64660 Monterrey, N.L., Mexico",
-        "Eje Metropolitano 7 420, Del Valle, 66220 San Pedro Garza García, N.L., Mexico")''')
+        "Calz San Pedro 106, Del Valle, 66220 Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("calzada_salida", "Calz San Pedro 501, Fuentes del Valle, 66220 San Pedro Garza García, N.L., Mexico",
-        "México 40 104, Miravalle, 64660 Monterrey, N.L., Mexico")''')
+        ("calzada_salida", "Calz San Pedro 103, Del Valle, 66220 Monterrey, N.L., Mexico",
+        "Calz San Pedro 105, Miravalle, 64660 Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("ladiana_entrada", "Dr. José Eleuterio González (Gonzalitos) 10, Leones, 64600 Monterrey, N.L., Mexico",
-        "Av. Ricardo Margain Zozaya 315, Zona Santa Engracia, 66267 San Pedro Garza García, N.L., Mexico")''')
+        ("ladiana_entrada", "Dr. José Eleuterio González (Gonzalitos), Mitras Nte., 64320 Monterrey, N.L., Mexico",
+        "Monterrey-Santiago 20, Los Doctores, Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("ladiana_salida", "Av. Ricardo Margain Zozaya 400, Santa Engracia, 66267 San Pedro Garza García, N.L., Mexico",
-        "Dr. José Eleuterio González (Gonzalitos) 10, Leones, 64600 Monterrey, N.L., Mexico")''')
+        ("ladiana_salida", "Dr. José Eleuterio González (Gonzalitos), Los Doctores, Monterrey, N.L., Mexico",
+        "Dr. José Eleuterio González (Gonzalitos), Mitras Nte., 64320 Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("tunel_entrada", "Av. Venustiano Carranza 820, Centro, 64000 Monterrey, N.L., Mexico",
+        ("tunel_entrada", "Av. Venustiano Carranza 1068, Industrial, 64440 Monterrey, N.L., Mexico",
         "Av. Real San Agustin, Zona Loma Larga Oriente, San Pedro Garza García, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
         ("tunel_salida", "Av. Real San Agustin & Eje Metropolitano 11, San Pedro Garza García, N.L., Mexico",
-        "Av. Venustiano Carranza 817, Centro, 64000 Monterrey, N.L., Mexico")''')
+        "Av. Venustiano Carranza 1001, Industrial, 64440 Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
         ("lazaro_entrada", "Estatua Lázaro Cárdenas, México 85, Las Torres, Monterrey, N.L., Mexico",
-        "Av Lázaro Cárdenas 2506, Zona San Agustín, 66278 Monterrey, N.L., Mexico")''')
+        "Calz. del Valle Alberto Santos 433-555, Valle de Santa Engracia, San Pedro Garza García, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("lazaro_salida", "Av Lázaro Cárdenas 329-S, Haciendas de La Sierra, San Pedro Garza García, N.L., Mexico",
-        "México 85, Mederos Uanl, 64980 Monterrey, N.L., Mexico")''')
+        ("lazaro_salida", "Avenida José Vasconcelos 265, Valle del Campestre, 66265 San Pedro Garza García, N.L., Mexico",
+        "Estatua Lázaro Cárdenas, México 85, Las Torres, Monterrey, N.L., Mexico")''')
 
 conn.commit()
 
 # Create the "traffic" table.
 
 cursor.execute('''CREATE TABLE traffic
-        (traffic_id integer PRIMARY KEY, route_name text, date_time text, distance integer, duration_traffic integer,
-        avg_delay integer, FOREIGN KEY (route_name) REFERENCES routes (route_name)) ''')
+        (traffic_id integer PRIMARY KEY, route_name text, date_time text, distance integer, velocity integer,
+        duration_traffic integer, avg_delay integer, FOREIGN KEY (route_name) REFERENCES routes (route_name)) ''')
 
 conn.close()
 
