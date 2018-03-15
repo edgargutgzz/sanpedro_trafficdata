@@ -14,12 +14,9 @@ This python script fetches data from several highways in the city using [Google 
 2. Install the Google Maps package.
 	- conda install -c conda-forge googlemaps
 
-3. Create a sqlite3 database file in the projects directory.
-	- File name: "database_name.db"
-	- Anaconda comes with sqlite3 installed.
-
-4. Create the "routes" and "traffic" tables for "database_name.db".
+3. Create an sqlite3 database with two tables (routes and traffic). 
 	- Run "tables.py" inside the newly created environment. 
+	- Anaconda comes with sqlite3 installed.
 
 **Production**
 
