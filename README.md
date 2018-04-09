@@ -22,7 +22,7 @@ Make sure you are working on the newly created environment for the remaining ste
 
 3. Create an sqlite3 database with two tables in it, "routes" and "traffic". 
 	- SQlite is one of the packages previously installed with Anaconda.
-	- Run "tables.py".
+	- Run "python tables.py".
 
 **Production**
 
