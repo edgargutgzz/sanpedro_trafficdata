@@ -15,14 +15,19 @@ You can create different environments with Conda in order to work with different
 1. Create a new environment called "env_name" and install the packages pandas and numpy.
 	- Run "conda create --name env_name pandas numpy"
 
-Make sure you are working on the newly created environment for the remaining steps. Run "conda info --envs" and look for the asterisk beside the enviroment name. 
+Make sure you are working on the newly created environment for the next two steps. Run "conda info --envs" and look for the asterisk beside the enviroment name. 
 
 2. Install the Google Maps package.
-	- conda install -c conda-forge googlemaps
+	- Run "conda install -c conda-forge googlemaps"
 
 3. Create an sqlite3 database with two tables in it, "routes" and "traffic". 
 	- SQlite is one of the packages previously installed with Anaconda.
 	- Run "python tables.py".
+
+4. Create a seperate file to store Google's API key.
+	- File name: "config.py"
+	- Variable name: "api_key"
+	- Don't forget to hide the file.
 
 **Production**
 
