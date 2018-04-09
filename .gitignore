@@ -2,8 +2,7 @@ config.py
 __pycache__
 .ipynb_checkpoints
 traffic_sanpedro.ipynb
-visualizaciones.ipynb
-directions_api.ipynb
+atirantado_periferico.ipynb
 matrix_api.ipynb
 traffic_data.db
 traffic_data.csv
