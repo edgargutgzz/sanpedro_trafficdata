@@ -24,14 +24,6 @@ cursor.execute(''' INSERT INTO routes VALUES
         "Av Raúl Rangel Frías 107-C, Cumbres 1º. Sector Secc a, 64610 Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("atirantado_periferico_entrada", "Blvd. Rogelio Cantú Gómez 1000-C, Sin Nombre de Col 72, 64639 Monterrey, N.L., Mexico",
-        "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico")''')
-
-cursor.execute(''' INSERT INTO routes VALUES
-        ("atirantado_periferico_salida", "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico",
-        "Blvd. Rogelio Cantú Gómez 210, Sin Nombre de Col 72, Monterrey, N.L., Mexico")''')
-
-cursor.execute(''' INSERT INTO routes VALUES
         ("calzada_entrada", "Calz San Pedro 107-S, Miravalle, 64660 Monterrey, N.L., Mexico",
         "Calz San Pedro 106, Del Valle, 66220 Monterrey, N.L., Mexico")''')
 
