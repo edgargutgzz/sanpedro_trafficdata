@@ -55,42 +55,6 @@ cursor.execute('''INSERT INTO traffic(route_name, date_time, distance, duration_
                                                       duration_traffic, velocity, avg_delay))
 
 
-# Atirantado desde Periferico - Entrada
-
-response = gmaps.distance_matrix(('25.696251, -100.38030099999999'),('25.665605, -100.380838'),
-                                 departure_time = "now")
-
-route_name = 'atirantado_periferico_entrada'
-date_time = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-distance = np.round((response['rows'][0]['elements'][0]['distance']['value']) / 1000, decimals = 1)
-duration_traffic = np.round((response['rows'][0]['elements'][0]['duration_in_traffic']['value']) / 60,
-                            decimals = 1)
-velocity = np.round((distance / duration_traffic) * 60, decimals = 0)
-avg_delay = np.round(duration_traffic / distance, decimals = 2)
-
-cursor.execute('''INSERT INTO traffic(route_name, date_time, distance, duration_traffic,
-                velocity, avg_delay) VALUES(?, ?, ?, ?, ?, ?)''', (route_name, date_time, distance,
-                                                      duration_traffic, velocity, avg_delay))
-
-
-# Atirantado desde Periferico - Salida
-
-response = gmaps.distance_matrix(('25.665591, -100.380774'),('25.696168, -100.380245'),
-                                 departure_time = "now")
-
-route_name = 'atirantado_periferico_salida'
-date_time = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-distance = np.round((response['rows'][0]['elements'][0]['distance']['value']) / 1000, decimals = 1)
-duration_traffic = np.round((response['rows'][0]['elements'][0]['duration_in_traffic']['value']) / 60,
-                            decimals = 1)
-velocity = np.round((distance / duration_traffic) * 60, decimals = 0)
-avg_delay = np.round(duration_traffic / distance, decimals = 2)
-
-cursor.execute('''INSERT INTO traffic(route_name, date_time, distance, duration_traffic,
-                velocity, avg_delay) VALUES(?, ?, ?, ?, ?, ?)''', (route_name, date_time, distance,
-                                                      duration_traffic, velocity, avg_delay))
-
-
 # Calzada Entrada
 
 response = gmaps.distance_matrix(('25.673569, -100.367882'),('25.658122, -100.370288'),
