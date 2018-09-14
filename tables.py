@@ -16,11 +16,11 @@ cursor.execute('''CREATE TABLE routes
 # Insert routes.
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("atirantado_leones_entrada", "Av Raúl Rangel Frías 3234, Cumbres 1º. Sector Secc a, 64610 Monterrey, N.L., Mexico",
+        ("atirantado_entrada", "Av Raúl Rangel Frías 3234, Cumbres 1º. Sector Secc a, 64610 Monterrey, N.L., Mexico",
         "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
-        ("atirantado_leones_salida", "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico",
+        ("atirantado_salida", "Avenida Humberto Lobo 707, Del Valle, 66225 San Pedro Garza García, N.L., Mexico",
         "Av Raúl Rangel Frías 107-C, Cumbres 1º. Sector Secc a, 64610 Monterrey, N.L., Mexico")''')
 
 cursor.execute(''' INSERT INTO routes VALUES
