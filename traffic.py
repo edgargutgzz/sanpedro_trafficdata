@@ -24,7 +24,7 @@ gmaps = googlemaps.Client(key = config.api_key)
 response = gmaps.distance_matrix(('25.704677, -100.36991499999999'),('25.665602, -100.380839'),
                                  departure_time = "now")
 
-route_name = 'atirantado_leones_entrada'
+route_name = 'atirantado_entrada'
 date_time = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 distance = np.round((response['rows'][0]['elements'][0]['distance']['value']) / 1000, decimals = 1)
 duration_traffic = np.round((response['rows'][0]['elements'][0]['duration_in_traffic']['value']) / 60,
@@ -42,7 +42,7 @@ cursor.execute('''INSERT INTO traffic(route_name, date_time, distance, duration_
 response = gmaps.distance_matrix(('25.665587, -100.380774'),('25.704632999999998, -100.369858'),
                                  departure_time = "now")
 
-route_name = 'atirantado_leones_salida'
+route_name = 'atirantado_salida'
 date_time = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 distance = np.round((response['rows'][0]['elements'][0]['distance']['value']) / 1000, decimals = 1)
 duration_traffic = np.round((response['rows'][0]['elements'][0]['duration_in_traffic']['value']) / 60,
